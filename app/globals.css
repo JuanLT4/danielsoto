@@ -3,24 +3,47 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply font-primary bg-primary text-white leading-loose;
-    }
-    .h1 {
-        @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
-    }
-    .h2 {
-        @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
-    }
-    .h3 {
-        @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
-    }
-    
-    .text-outline {
-        -webkit-text-stroke: 1px #ffffff;
-    }
-    
-    .text-outline-hover {
-        -webkit-text-stroke: 1px #46FF46;
-    }
+  body {
+    @apply font-primary bg-primary text-white leading-loose;
+  }
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #46ff46;
+  }
+}
+/* Personaliza el scrollbar en Chrome, Safari y Edge */
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+  background-color: #2e2e2d; /* Color de fondo del scrollbar */
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background-color: #00943d; /* Color del "pulgar" del scrollbar */
+  border-radius: 10px;
+  border: 2px solid #2e2e2d; /* Para que parezca separado */
+}
+
+/* Personaliza el scrollbar en Firefox */
+.carousel-container {
+  scrollbar-width: thin; /* Controla el grosor */
+  scrollbar-color: #00943d #2e2e2d; /* Colores del "pulgar" y fondo */
+}
+
+.sombra {
+  -webkit-box-shadow: 0px 7px 18px -4px rgba(0, 148, 61, 1);
+  -moz-box-shadow: 0px 7px 18px -4px rgba(0, 148, 61, 1);
+  box-shadow: 0px 7px 18px -4px rgba(0, 148, 61, 1);
 }
