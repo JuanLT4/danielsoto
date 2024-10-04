@@ -9,17 +9,16 @@ import {
   // FaReact,
   // FaFigma,
   // FaNodeJs,
-  FaFutbol
+  FaFutbol,
 } from "react-icons/fa";
 
 import { TbShirtSport } from "react-icons/tb";
-import { GiBullseye, GiTeamUpgrade, GiSpeedometer } from "react-icons/gi";
-
+import { GiBullseye, GiTeamUpgrade, GiSpeedometer, GiMorgueFeet } from "react-icons/gi";
 
 const about = {
   title: "About Me",
   description:
-    "I am Daniel Soto, a passionate soccer player from Colombia with a strong drive to succeed both on and off the field. With a background in competitive sports, I am eager to further develop my skills and gain new experiences through an exchange program in the United States.",
+    "I am Daniel Soto, a passionate soccer player from Colombia with a strong drive to succeed both on and off the field. With a background in competitive sports, I am eager to further develop my skills and gain new experiences through a college program in the United States.",
   info: [
     {
       fieldName: "Name",
@@ -27,7 +26,7 @@ const about = {
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+57) 302 430 2190",
+      fieldValue: "(+57) 310 739 3864",
     },
     {
       fieldName: "Experience",
@@ -35,7 +34,7 @@ const about = {
     },
     {
       fieldName: "Position",
-      fieldValue: "Midfielder",
+      fieldValue: "Left Winger / Midfielder",
     },
     {
       fieldName: "Nationality",
@@ -43,11 +42,11 @@ const about = {
     },
     {
       fieldName: "Email",
-      fieldValue: "daniel.soto@gmail.com",
+      fieldValue: "fernandosoto36@hotmail.es",
     },
     {
       fieldName: "Status",
-      fieldValue: "Available for Exchange Programs",
+      fieldValue: "Available for College Programs",
     },
     {
       fieldName: "Languages",
@@ -63,18 +62,32 @@ const experience = {
     "Throughout my career, I've played in various competitive leagues, developing my skills as a team player and leader on the field. My experiences have prepared me to take on new challenges and excel in a university sports program.",
   items: [
     {
-      club: "Club Deportivo Cali",
-      position: "Midfielder",
-      duration: "2020 - Present",
+      club: "Campo Amor Team",
+      position: "Left Winger / Attacking Midfielder",
+      duration: "2022 - Present",
+      description:
+        "Refined my tactical understanding and positioning, playing a key role in offensive plays while also contributing defensively when needed. Developed leadership skills by coordinating plays with teammates.",
+    },
+    {
+      club: "Student football League",
+      position: "Left Winger",
+      duration: "2018 - 2022",
+      description:
+        "Acquired foundational skills in youth leagues, focusing on ball control, teamwork, and effective communication on the field. Learned the importance of strategy and positioning in attacking roles.",
+    },
+    {
+      club: "'Modo Fútbol'",
+      position: "Left Winger",
+      duration: "2015 - 2017",
       description:
         "Competed in national tournaments, contributing to the team's success with strategic playmaking and consistent performance.",
     },
     {
-      club: "Atlético Nacional",
-      position: "Midfielder",
-      duration: "2016 - 2020",
+      club: "Aristogol Soccer Academy",
+      position: "Left Winger",
+      duration: "2012 - 2014",
       description:
-        "Gained valuable experience playing in youth leagues, honing my skills in ball control, passing accuracy, and teamwork.",
+        "Launched my football journey by developing fundamental skills such as dribbling, passing, and positioning. Gained a strong foundation in teamwork and discipline, which set the stage for my growth as a versatile player on the field.",
     },
     // Add more experiences as needed
   ],
@@ -87,9 +100,16 @@ const education = {
     "In addition to my soccer training, I am committed to academic excellence, balancing both sports and studies to achieve a well-rounded education.",
   items: [
     {
-      institution: "Colegio Nacional",
-      degree: "High School Diploma",
-      duration: "2014 - 2020",
+      institution: "'Casa Colores' Garden",
+      degree: "Elementary School",
+      duration: "2012 - 2018",
+      description:
+        "Completed my elementary school education while actively participating in soccer programs, maintaining strong academic performance alongside my athletic commitments.",
+    },
+    {
+      institution: "'San Jose de la Salle' High School",
+      degree: "High School",
+      duration: "2018 - 2024",
       description:
         "Completed my high school education while actively participating in soccer programs, maintaining strong academic performance alongside my athletic commitments.",
     },
@@ -120,13 +140,15 @@ const skills = {
       name: "Teamwork",
     },
     {
-      icon: <GiSpeedometer  />,
+      icon: <GiSpeedometer />,
       name: "Speed and Agility",
+    },
+    {
+      icon: <GiMorgueFeet />,
+      name: "Left foot",
     },
   ],
 };
-
-
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -174,9 +196,14 @@ const Resume = () => {
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
-                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                        <li
+                          key={index}
+                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                            {item.position}
+                          </h3>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.club}</p>
@@ -189,7 +216,7 @@ const Resume = () => {
               </div>
             </TabsContent>
             <TabsContent value="education" className="w-full">
-            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
@@ -198,9 +225,14 @@ const Resume = () => {
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
-                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                        <li
+                          key={index}
+                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                            {item.degree}
+                          </h3>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.institution}</p>
@@ -216,16 +248,20 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {skills.description}
+                  </p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillList.map((skill, index)=> {
+                  {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="capitalize">{skill.name}</p>
@@ -233,23 +269,31 @@ const Resume = () => {
                           </Tooltip>
                         </TooltipProvider>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>
             </TabsContent>
-            <TabsContent value="about" className="w-full text-center xl:text-left">
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 ">{about.description}</p>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 ">
+                  {about.description}
+                </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.info.map((item, index)=> {
+                  {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>

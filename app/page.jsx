@@ -15,7 +15,7 @@ const Home = () => {
           <div className='text-center xl:text-left order-2 xl:order-none'>
             <span className='text-xl'>Soccer Player</span>
             <h1 className='h1 mb-6'>Hello I'm <br /> <span className='text-accent'>Daniel Soto</span></h1>
-            <p className='max-w-[500px] mb-9 text-white/80'>I'm a dedicated soccer player from Colombia, looking to join an exchange program in the U.S. I'm eager to bring my passion and skills to a university that values both sports and academics.
+            <p className='max-w-[500px] mb-9 text-white/80'>I'm a dedicated soccer player from Colombia, looking to join a college program in the U.S. I'm eager to bring my passion and skills to a university that values both sports and academics.
 </p>
             <div className='flex flex-col xl:flex-row items-center gap-8'>
               <Button variant="outline" size="lg" className="uppercase flex items-center gap-2 hover:bg-accent-hover hover:text-black">

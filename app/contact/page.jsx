@@ -13,18 +13,18 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+57) 321 754 9043"
+    description: "(+57) 310 739 3864"
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "contact@danielsoto.com"
+    description: "fernandosoto36@hotmail.es"
   },
-  {
-    icon: <FaMapMarkerAlt />,
-    title: "Address",
-    description: "Calle 50 #37-10"
-  },
+  // {
+  //   icon: <FaMapMarkerAlt />,
+  //   title: "Address",
+  //   description: "Calle 50 #37-10"
+  // },
 ]
 
 import { motion } from "framer-motion";

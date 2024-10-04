@@ -8,10 +8,10 @@ const links = [
         name: 'home',
         path: '/'
     },
-    {
-        name: 'milestones',
-        path: '/milestones'
-    },
+    // {
+    //     name: 'milestones',
+    //     path: '/milestones'
+    // },
     {
         name: 'resume',
         path: '/resume'
